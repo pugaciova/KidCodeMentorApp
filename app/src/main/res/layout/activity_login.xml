@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/background"
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/logo"
@@ -24,6 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Введите логин и пароль:"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/logo"
@@ -37,6 +40,7 @@
         android:layout_height="48dp"
         android:hint="Email"
         android:background="@drawable/edittext_background"
+        android:textColor="@android:color/white"
         android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@id/welcomeText"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +53,7 @@
         android:layout_height="48dp"
         android:hint="Password"
         android:background="@drawable/edittext_background"
+        android:textColor="@android:color/white"
         android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@id/emailInput"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +66,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:background="@color/colorButton"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/passwordInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
