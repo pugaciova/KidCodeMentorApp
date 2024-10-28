@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" /> <!-- Replace 'background' with the actual drawable resource name -->
+
+    <!-- Illustration of the seated girl at the top -->
+    <ImageView
+        android:id="@+id/girl_illustration"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/about_image"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="207dp" />
+
+    <!-- White content area pinned at the bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_white_background"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <!-- Course description text -->
+        <TextView
+            android:id="@+id/course_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Начни улучшать свои навыки сегодня!"
+            android:textColor="#333333"
+            android:textSize="28sp"
+            android:fontFamily="@font/inter_italic"/>
+
+        <!-- Course description text -->
+        <TextView
+            android:id="@+id/course_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Это приложение поможет вам овладеть новыми методами преподавания и улучшить свои навыки."
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:fontFamily="@font/urbanist"/>
+
+        <!-- Start button -->
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="200dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#6750A4"
+            android:text="Начнем!"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</RelativeLayout>
