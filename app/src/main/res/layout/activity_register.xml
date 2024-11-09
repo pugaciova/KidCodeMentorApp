@@ -59,6 +59,7 @@
         android:background="@drawable/edittext_background"
         android:textColor="@android:color/white"
         android:padding="10dp"
+        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/emailInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,6 +71,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:hint="Повторите пароль:"
+        android:inputType="textPassword"
         android:background="@drawable/edittext_background"
         android:textColor="@android:color/white"
         android:padding="10dp"
@@ -79,7 +81,7 @@
         android:layout_marginTop="8dp"/>
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/registerButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Регистрация"
@@ -93,13 +95,14 @@
     <TextView
         android:id="@+id/signupText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="Уже есть аккаунт? Войти"
         android:textColor="@color/colorAccent"
-        app:layout_constraintTop_toBottomOf="@id/loginButton"
+        app:layout_constraintTop_toBottomOf="@id/registerButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:clickable="true"/>
 
     <ImageView
         android:id="@+id/logo"

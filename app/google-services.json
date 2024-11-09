@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "930340046191",
+    "project_id": "kidcodementorapp",
+    "storage_bucket": "kidcodementorapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930340046191:android:99390fd113f234e3f2d49a",
+        "android_client_info": {
+          "package_name": "com.example.kidcodementorapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8Jcudkh99N3AUsLBcs8pOOJHklNXku4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
