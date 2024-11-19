@@ -1,0 +1,21 @@
+<!-- res/drawable/bottom_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background -->
+    <item android:top="0dp" android:bottom="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Bottom shadow effect -->
+    <item android:top="0dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FFFF1F"
+                android:endColor="@android:color/transparent"
+                android:angle="270"
+                android:gradientRadius="8dp"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>
