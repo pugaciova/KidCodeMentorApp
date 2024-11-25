@@ -117,6 +117,7 @@
 
             <!-- Основы преподавания -->
             <LinearLayout
+                android:id="@+id/course_teaching_basics"
                 android:layout_width="15dp"
                 android:layout_height="220dp"
                 android:layout_margin="8dp"

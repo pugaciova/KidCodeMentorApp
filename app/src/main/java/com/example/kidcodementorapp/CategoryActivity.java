@@ -1,12 +1,16 @@
 package com.example.kidcodementorapp;
 
+import android.content.Intent; // Добавлено для работы с Intent
 import android.os.Bundle;
+import android.view.View; // Добавлено для обработки нажатий
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.kidcodementorapp.Models.TechBasicsActivity;
 
 public class CategoryActivity extends AppCompatActivity {
 
@@ -19,6 +23,16 @@ public class CategoryActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        // Найти блок "Основы преподавания" и установить обработчик нажатий
+        findViewById(R.id.course_teaching_basics).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Переход на TechBasicsActivity
+                Intent intent = new Intent(CategoryActivity.this, TechBasicsActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }

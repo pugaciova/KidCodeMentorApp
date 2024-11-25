@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:id="@+id/main">
+
+    <!-- Welcome Section -->
+    <!-- Title Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar_placeholder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Привет, Welcome 👋"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Updated Поздравляем! -->
+
+    <!-- Updated Твой первый курс -->
+
+    <!-- Featured Course -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Поздравляем!"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:paddingBottom="16dp"
+        android:text="Твой первый курс"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/basic_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tech_basics_course_img" />
+
+        <TextView
+            android:id="@+id/course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Основы Преподавания"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:shadowColor="#000080"
+            android:padding="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp" />
+
+        <ImageView
+            android:id="@+id/play_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/play_button"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- Updated Описание курса -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:text="Описание курса"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="В этом курсе ты узнаешь:"
+            android:textSize="18sp"
+            android:textColor="#6A57FC"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐️ Методы преподавания"
+            android:textSize="16sp"
+            android:textColor="#6A6A6A"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐️ Основные приложения для работы"
+            android:textSize="16sp"
+            android:textColor="#6A6A6A"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐️ Специфику работы с детьми"
+            android:textSize="16sp"
+            android:textColor="#6A6A6A"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐️ Начальные этапы и знакомство"
+            android:textSize="16sp"
+            android:textColor="#6A6A6A"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐️ Длительность курса: 15 занятий"
+            android:textSize="16sp"
+            android:textColor="#6A6A6A"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐️ Длительность занятия: 15 минут"
+            android:textSize="16sp"
+            android:textColor="#6A6A6A" />
+
+    </LinearLayout>
+
+</LinearLayout>
