@@ -13,10 +13,22 @@
         android:theme="@style/Theme.KidCodeMentorApp"
         tools:targetApi="31">
         <activity
-            android:name=".Models.BasicsInnActivity"
+            android:name=".BasicsLesson2"
             android:exported="false" />
         <activity
-            android:name=".Models.TechBasicsActivity"
+            android:name=".BasicsLesson1"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BasicsTrailerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BasicsInnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TechBasicsActivity"
             android:exported="false" />
         <activity
             android:name=".CategoryActivity"

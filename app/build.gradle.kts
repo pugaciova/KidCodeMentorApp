@@ -39,6 +39,8 @@ dependencies {
     implementation ("com.google.android.gms:play-services-auth:20.3.0")
     implementation ("com.facebook.android:facebook-login:12.3.0")
     implementation ("com.google.firebase:firebase-database:20.2.1")
+    implementation ("com.google.firebase:firebase-firestore:24.6.0")
+
 
     implementation(libs.appcompat)
     implementation(libs.material)

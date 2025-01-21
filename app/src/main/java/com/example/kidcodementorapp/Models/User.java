@@ -1,17 +1,27 @@
 package com.example.kidcodementorapp.Models;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class User {
-    private String name, email, pass;
+    private String name;
+    private String email;
+    private String pass;
+    private Map<String, Course> userProgress; // Прогресс пользователя по курсам (название курса -> объект Course)
 
-    public User() {}
+    public User() {
+        // Инициализация прогресса пустым значением
+        this.userProgress = new HashMap<>();
+    }
 
-    public User(String name, String email, String pass, String phone) {
+    public User(String name, String email, String pass) {
         this.name = name;
         this.email = email;
         this.pass = pass;
-
+        this.userProgress = new HashMap<>();
     }
 
+    // Геттеры и сеттеры для name, email, pass
     public String getName() {
         return name;
     }
@@ -36,4 +46,12 @@ public class User {
         this.pass = pass;
     }
 
+    // Геттер и сеттер для userProgress
+    public Map<String, Course> getUserProgress() {
+        return userProgress;
+    }
+
+    public void setUserProgress(Map<String, Course> userProgress) {
+        this.userProgress = userProgress;
+    }
 }

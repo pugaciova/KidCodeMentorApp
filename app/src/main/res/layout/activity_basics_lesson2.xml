@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Внутри ScrollView добавляем LinearLayout для размещения контента -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Заголовок статьи -->
+        <TextView
+            android:id="@+id/article_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Урок 2 - Приложения для работы"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Изображение 1 -->
+
+        <!-- Текст статьи -->
+
+        <ImageView
+            android:id="@+id/article_image_1"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_basics_lesson1" />
+
+        <TextView
+            android:id="@+id/article_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Методы преподавания в общем можно разделить на три основные категории: пассивный, активный и интерактивный."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Текст статьи -->
+        <TextView
+            android:id="@+id/article_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пассивный метод символизируется полумесяцем и предполагает, что ученики в основном слушают учителя, воспринимая информацию без активного взаимодействия. При этом учитель передает знания, а ученики просто их усваивают. Такой подход часто используется на лекциях в университетах, где учащиеся слушают материал и делают конспекты. Такой метод совершенно не подходит для онлайн-школы программирования. Нам стоит обратить внимание на активный и интерактивный способы."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Активный метод обозначен улыбающимся смайликом. Здесь ученики вовлечены в процесс обучения более активно, они выполняют задания, задают вопросы и взаимодействуют с преподавателем. Между учителем и учениками идет двусторонняя связь, основанная на обмене информацией. Примеры включают практические задания, обсуждения и выполнение кода прямо во время занятия."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Изображение 2 -->
+        <ImageView
+            android:id="@+id/article_image_2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic1_basics_lesson1"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Интерактивный метод представляется в виде звезды. Этот подход подразумевает активное взаимодействие не только между учителем и учениками, но и между самими учениками. Взаимодействие становится трехсторонним: учитель ↔ ученики ↔ ученики. Такой метод подходит для работы в командах, выполнения групповых проектов или обсуждения задач в парах."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Интерактивные формы и методы обучения направлены на создание живого и увлекательного процесса взаимодействия между учителем и учениками. Они помогают учащимся активно включаться в процесс обучения и взаимодействовать друг с другом. Основные способы, которые можно использовать в обучении, включают следующие:"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Мозговой штурм"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Этот метод стимулирует креативное мышление и помогает быстро генерировать идеи в группе. Ученики свободно предлагают свои мысли, обсуждают их и находят нестандартные решения задач."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Презентации с опросами"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Включение вопросов и опросов в презентации позволяет активно вовлечь учеников в процесс обучения. Они могут взаимодействовать с материалом, отвечать на вопросы и обсуждать ответы."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Квизы и голосования"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Игровые элементы, такие как квизы и голосования, делают обучение интересным и мотивируют учеников. Эти инструменты также позволяют оценить уровень усвоения материала."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Мастер-классы"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Практические занятия, на которых ученики могут обучаться конкретным навыкам под руководством эксперта. Мастер-классы способствуют углубленному изучению тем и применению знаний на практике."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Еще текст или другой контент -->
+        <TextView
+            android:id="@+id/article_text_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Интерактивные методы делают уроки более увлекательными и продуктивными, способствуют активному участию учеников в процессе обучения и развитию навыков командной работы и коммуникации."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Stop Lesson Button -->
+        <Button
+            android:id="@+id/stop_lesson"
+            android:layout_width="200dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#B0A4FD"
+            android:text="Завершить занятие"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
