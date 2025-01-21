@@ -1,33 +1,44 @@
 package com.example.kidcodementorapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class BasicsTrailerActivity extends AppCompatActivity {
+
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basics_trailer);
 
+        // Инициализация SharedPreferences
+        sharedPreferences = getSharedPreferences("LessonsProgress", MODE_PRIVATE);
+
         // Найти кнопку завершения
         Button completeLessonButton = findViewById(R.id.stop_lesson);
 
         // Установить слушатель нажатий
         completeLessonButton.setOnClickListener(view -> {
-            // Отправить данные через Intent
+            // Сохранение прогресса в Firebase
+            saveLessonProgressToFirebase();
+
+            // Обновить прогресс урока и разблокировать следующий
+            BasicsInnActivity.updateLessonState(sharedPreferences, "lesson_trailer", 100, "lesson_1");
+
+            // Вернуться к странице со списком уроков
             Intent intent = new Intent(BasicsTrailerActivity.this, BasicsInnActivity.class);
-            intent.putExtra("lesson2_unlocked", true);
-            intent.putExtra("lesson1_progress", 100);
             startActivity(intent);
 
             // Завершить текущую активность
@@ -40,5 +51,32 @@ public class BasicsTrailerActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    // Метод для сохранения прогресса урока в Firebase
+    private void saveLessonProgressToFirebase() {
+        String userId = getCurrentUserUid();
+        if (userId == null) return;
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+
+        // Сохранение прогресса Trailer
+        database.child("users").child(userId).child("courses").child("course_1")
+                .child("lessons_completed").child("lesson_1").setValue(true);
+
+        // Обновление общего прогресса курса
+        database.child("users").child(userId).child("courses").child("course_1")
+                .child("progress").setValue(100); // Обновить прогресс на 100% для примера
+    }
+
+    // Метод для получения UID текущего пользователя
+    private String getCurrentUserUid() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            return auth.getCurrentUser().getUid();
+        } else {
+            // Пользователь не авторизован
+            return null;
+        }
     }
 }

@@ -1,10 +1,10 @@
 package com.example.kidcodementorapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -12,20 +12,26 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class BasicsLesson1 extends AppCompatActivity {
 
+    private SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basics_lesson1);
+
+        // Инициализация SharedPreferences
+        sharedPreferences = getSharedPreferences("LessonsProgress", MODE_PRIVATE);
 
         // Найти кнопку завершения
         Button completeLessonButton = findViewById(R.id.stop_lesson);
 
         // Установить слушатель нажатий
         completeLessonButton.setOnClickListener(view -> {
-            // Отправить данные через Intent
+            // Обновить прогресс текущего урока и разблокировать следующий
+            BasicsInnActivity.updateLessonState(sharedPreferences, "lesson_1", 100, "lesson_2");
+
+            // Вернуться к странице со списком уроков
             Intent intent = new Intent(BasicsLesson1.this, BasicsInnActivity.class);
-            intent.putExtra("lesson3_unlocked", true);
-            intent.putExtra("lesson2_progress", 100);
             startActivity(intent);
 
             // Завершить текущую активность
