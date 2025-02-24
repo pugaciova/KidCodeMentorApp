@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".QuizActivity1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Блок с вопросом -->
+
+        <!-- Варианты ответов -->
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/question_bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Вопрос будет здесь"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/answer_A"
+            style="@style/QuizOptionButton"
+            android:text="Ответ A"/>
+
+        <Button
+            android:id="@+id/answer_B"
+            style="@style/QuizOptionButton"
+            android:text="Ответ B"/>
+
+        <Button
+            android:id="@+id/answer_C"
+            style="@style/QuizOptionButton"
+            android:text="Ответ C"/>
+
+        <!-- Кнопка "Следующий вопрос" -->
+
+        <Button
+            android:id="@+id/answer_D"
+            style="@style/QuizOptionButton"
+            android:text="Ответ D" />
+
+        <Button
+            android:id="@+id/nextQuestionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Следующий вопрос"
+            android:textSize="18sp"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

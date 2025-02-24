@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние: кнопка нажата -->
+    <item android:state_pressed="true">
+        <shape>
+            <!-- Ваш кастомный цвет для нажатия -->
+            <solid android:color="#FF4081"/> <!-- Пример: розовый -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Состояние: кнопка неактивна (опционально) -->
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="#BDBDBD"/> <!-- Серый -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Дефолтное состояние (когда кнопка отпущена) -->
+    <item>
+        <shape>
+            <!-- Ваш кастомный цвет по умолчанию -->
+            <solid android:color="#3F51B5"/> <!-- Пример: синий -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+</selector>

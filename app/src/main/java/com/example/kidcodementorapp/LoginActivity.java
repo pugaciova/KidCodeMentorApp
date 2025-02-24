@@ -1,20 +1,16 @@
 package com.example.kidcodementorapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -69,9 +65,37 @@ public class LoginActivity extends AppCompatActivity {
 
         auth.signInWithEmailAndPassword(email, password)
                 .addOnSuccessListener(authResult -> {
+                    // После успешного входа синхронизируем прогресс из Firebase
+                    syncProgressFromFirebase();
                     startActivity(new Intent(LoginActivity.this, AboutActivity.class));
                     finish();
                 })
                 .addOnFailureListener(e -> Toast.makeText(LoginActivity.this, "Ошибка авторизации: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+    }
+
+    private void syncProgressFromFirebase() {
+        String userId = auth.getCurrentUser().getUid();
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+        database.child("users").child(userId).child("courses").child("course_1")
+                .get().addOnCompleteListener(task -> {
+                    if (task.isSuccessful() && task.getResult() != null) {
+                        // Загружаем прогресс из Firebase и сохраняем в SharedPreferences
+                        boolean lesson1Completed = task.getResult()
+                                .child("lessons_completed")
+                                .child("lesson_1")
+                                .getValue(Boolean.class) != null;
+                        int courseProgress = task.getResult()
+                                .child("progress")
+                                .getValue(Integer.class);
+
+                        SharedPreferences sharedPreferences = getSharedPreferences("LessonsProgress", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean("lesson_1_unlocked", lesson1Completed);
+                        editor.putInt("lesson_1_progress", lesson1Completed ? 100 : 0);
+                        editor.apply();
+                    } else {
+                        System.out.println("Ошибка при загрузке данных из Firebase: " + task.getException());
+                    }
+                });
     }
 }

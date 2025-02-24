@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/student_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student: I have finished all tasks. What should I do next?"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="20dp"/>
+
+    <!-- Пространство для видео ребенка -->
+    <VideoView
+        android:id="@+id/student_video"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#000000"/>
+
+    <!-- Инструкция -->
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите правильный вариант ответа"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+    <!-- Кнопки с вариантами ответа -->
+    <Button
+        android:id="@+id/option_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check additional materials"/>
+
+    <Button
+        android:id="@+id/option_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Help your classmate"/>
+
+    <Button
+        android:id="@+id/option_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stay quiet for now"/>
+
+    <Button
+        android:id="@+id/option_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start the next assignment"/>
+
+</LinearLayout>

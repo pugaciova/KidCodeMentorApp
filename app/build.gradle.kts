@@ -42,10 +42,13 @@ dependencies {
     implementation ("com.google.firebase:firebase-firestore:24.6.0")
 
 
+
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.firebase.messaging)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
